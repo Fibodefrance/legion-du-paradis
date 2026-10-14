@@ -106,16 +106,17 @@
 <a href="confidentialite.html" hreflang="fr">Français</a></nav>
 </header>
 <main>
-<p><em>Applies to the <strong>Legion of Paradise</strong> app (version 1.0.3) on Android, iOS and in the browser. Last updated: 2026-10-06.</em></p>
+<p><em>Applies to the <strong>Legion of Paradise</strong> app (version 1.0.6) on Android, iOS and in the browser. Last updated: 2026-10-14.</em></p>
 <h2>In one sentence</h2>
-<p><strong>Legion of Paradise sends nothing back to its publisher. The only data collection is that of the optional adverts, on iPhone and iPad, by Google — and only when you choose to watch one.</strong> Your game is a file, it lives on your device; when you leave the game, a copy goes to <strong>your</strong> iCloud or Google account, so that you can find it on another device — never to a server of ours.</p>
-<p>There is no server of ours, and no network request is ever addressed to the publisher, under any circumstances. The app contains no analytics and no behaviour-measuring tool meant for us. On <strong>Android and in the browser</strong>, it contains no advertising and collects no personal data.</p>
+<p><strong>Legion of Paradise sends its publisher only what the online Colosseum needs, and only if you choose to enter it: an identifier drawn at random, a legion name drawn by lot, your team, your rating and your battles. The only other data collected is that of the optional adverts, on iPhone and iPad, by Google — and only when you choose to watch one.</strong> Your game is a file, it lives on your device; when you leave the game, a copy goes to <strong>your</strong> iCloud or Google account, so that you can find it on another device — never to a server of ours.</p>
+<p>The only server of ours is the online Colosseum's (see below): it receives nothing until you have entered it, and never your game. The app contains no analytics and no behaviour-measuring tool meant for us. On <strong>Android and in the browser</strong>, it contains no advertising.</p>
 <h2>What the app stores, and where</h2>
 <table><thead><tr><th>What</th><th>Where it is written</th><th>Who can read it</th></tr></thead><tbody>
 <tr><td>Your progress: legion, buildings, gold, quests, settings</td><td>A file on your device (<code>sauvegarde.json</code>); browser local storage for the web version</td><td>You alone</td></tr>
 <tr><td>The tokens for your in-app purchases</td><td>The same file</td><td>You alone</td></tr>
 <tr><td>A randomly drawn game identifier</td><td>The same file</td><td>You alone</td></tr>
 <tr><td>Your language and volume settings</td><td>The same file</td><td>You alone</td></tr>
+<tr><td>Your online Colosseum account: an identifier and a secret drawn at random</td><td>The same file, and the Colosseum server (see below)</td><td>You, and the publisher for the server</td></tr>
 </tbody></table>
 <p><strong>The game identifier does not identify a person or a device.</strong> It is a number drawn at random the first time you save online, and its only job is to notice that a second device has written since your last exchange, so the app can ask you which of the two games to keep instead of silently overwriting one. It is derived from no hardware, advertising or account identifier. Erasing the game erases it.</p>
 <h2>What leaves the device</h2>
@@ -128,6 +129,22 @@
 </ul>
 <p>What leaves is the content described in the table above, and nothing else: a saved game. No name, no address, no contacts, no location.</p>
 <p>To remove a stored game, use the Google Play Games or iCloud settings on your device; they hold it, and they alone can erase it.</p>
+<h3>The online Colosseum</h3>
+<p>At the Colosseum, your Legion fights other players' legions. <strong>Nothing is sent until you have entered it</strong>: on your first visit, the Colosseum window says what is kept and offers "Enter the online Colosseum" or "Train offline"; training sends nothing. Once you have entered, the game sends your team on each visit to the Colosseum, and once a day at launch, so that it can defend your place.</p>
+<p><strong>What our server keeps</strong>:</p>
+<ul>
+<li>an identifier and a secret drawn at random when you enter, which recognise you; the secret is kept only as a hash;</li>
+<li>a <strong>legion name drawn by lot</strong> ("Legion of Raziel No. 482"): you do not choose it;</li>
+<li><strong>the team</strong> you enter: class, choir, level and battle statistics of up to five angels;</li>
+<li><strong>your rating</strong>, your battles of the day and of the season, your wins;</li>
+<li><strong>each battle</strong>: both teams, its draw and its outcome;</li>
+<li>the game version and the date of your last request.</li>
+</ul>
+<p>Nothing else: no name, no email address, no contacts, no device or advertising identifier, no location, not your game.</p>
+<p><strong>What other players see</strong>: your legion name, your rating and your place in the ranking, and your team when they fight it. Never your identifier.</p>
+<p><strong>Where</strong>: at Supabase (Supabase Inc.), on servers located in Ireland, in the European Union. Like any server, it sees the IP address of the connection; it is recorded in none of our tables, and only the host's technical logs keep it for a few days.</p>
+<p><strong>How long</strong>: a battle is erased after 90 days; an account that has made no request for 12 months is erased, with its team and its battles. The database does this by itself, every night.</p>
+<p><strong>Why</strong>: to provide the service you ask for by entering the online Colosseum — finding you opponents, counting your battles and keeping the ranking. None of it is sold or shared, and none of it is used for advertising.</p>
 <h3>In-app purchases</h3>
 <p>Payments are handled <strong>entirely by Google Play or the App Store</strong>. The app never sees your payment method, your name or your billing address: it receives a token from the store saying "this purchase is valid", and that is all.</p>
 <p>As a publisher we receive <strong>aggregated sales reports</strong> from Google and Apple — amounts and countries, never a buyer's identity. How Google and Apple handle your payment data is governed by their own privacy policies, not by this one.</p>
@@ -152,10 +169,13 @@
 <p>At any time, from Virgil's window, <strong>"My privacy choices (Google)"</strong>, where the law of your country requires it, reopens Google's window. And asking for no favour means sending no advert request.</p>
 <p>If you bought the Monthly Blessing, Virgil grants his favours <strong>without an advert</strong>: no request is sent to Google for them.</p>
 <h2>Children</h2>
-<p>The app is not specifically directed at children and asks them for no information. The only data collected is collected by Google, for Virgil's optional adverts on iPhone and iPad, and only when one chooses to watch one. It also contains <strong>in-app purchases</strong>: the Google Play and App Store parental controls can restrict both.</p>
+<p>The app is not specifically directed at children and asks them for no information. Data is collected by Google, for Virgil's optional adverts on iPhone and iPad, and only when one chooses to watch one; and by us, for the online Colosseum, only if one enters it (see above: no name, no contacts). It also contains <strong>in-app purchases</strong>: the Google Play and App Store parental controls can restrict both.</p>
 <h2>Your rights</h2>
 <p>The European General Data Protection Regulation (GDPR) gives you rights of access, rectification, erasure, restriction, objection and portability over your personal data.</p>
-<p><strong>We hold no personal data about you</strong>: there is therefore nothing for us to send you, nothing to rectify and nothing to erase on our side. Your game data is on your device and on your Google or Apple account, where you control it directly; advertising data is held by Google, which is responsible for it:</p>
+<p><strong>We hold only one thing that may concern you: your online Colosseum account</strong>, if you have entered it — pseudonymous data, with no name or contacts (see "The online Colosseum"). Your game data is on your device and on your Google or Apple account, where you control it directly; advertising data is held by Google, which is responsible for it:</p>
+<ul>
+<li><strong>Your online Colosseum account</strong>: to get a copy of it or have it erased, with your team and your battles, write to us at <strong>legionduparadis@gmail.com</strong> giving your legion name (it is shown at the top of the Colosseum). It also erases itself after 12 months without a battle.</li>
+</ul>
 <ul>
 <li><strong>Erase the local game</strong>: uninstall the app, or ⚙ Settings → "Start over".</li>
 <li><strong>Erase the online game</strong>: through the Google Play Games settings ("Delete game data") or iCloud settings on your device.</li>
@@ -163,7 +183,7 @@
 </ul>
 <p>You may nevertheless write to us at any time at <strong>legionduparadis@gmail.com</strong>; we answer within 5 working days. If you are in the European Union you also have the right to lodge a complaint with your national data protection authority.</p>
 <h2>Security and retention</h2>
-<p>As nothing is transmitted to the publisher, there is no database of ours to protect and no retention period for us to set. Advertising data is retained by Google under its own policy. The local game lives as long as the app is installed; the online game lives as long as your Google or Apple account keeps it.</p>
+<p>Our only database is the online Colosseum's. It is not open to the public: only the Colosseum function reads and writes it, and each account's secret is kept there only as a hash. A battle is kept for 90 days, an inactive account for 12 months (see "The online Colosseum"). Advertising data is retained by Google under its own policy. The local game lives as long as the app is installed; the online game lives as long as your Google or Apple account keeps it.</p>
 <h2>Changes</h2>
 <p>Any change to this policy will be published on this page, with its date. A change affecting what the app transmits — a new ad network, or adverts on another platform, for instance — would be announced inside the app before taking effect.</p>
 <h2>Contact</h2>
