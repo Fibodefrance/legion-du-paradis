@@ -114,10 +114,10 @@
 <a href="privacy-ko.html" hreflang="ko" lang="ko">한국어</a></nav>
 </header>
 <main>
-<p><em>Applies to the <strong>Legion of Paradise</strong> app (version 1.0.7) on Android, iOS and in the browser. Last updated: 2026-10-22.</em></p>
+<p><em>Applies to the <strong>Legion of Paradise</strong> app (version 1.0.7) on Android, iOS and in the browser. Last updated: 2026-10-23.</em></p>
 <h2>In one sentence</h2>
-<p><strong>Legion of Paradise sends its publisher only what the online Colosseum needs, and only if you choose to enter it: an identifier drawn at random, a legion name drawn by lot (or your Game Center nickname), your team, your rating, your battles, your Siege assaults, the angel you lend as a reinforcement, your friends, your guild and your messages in its chat. The only other data collected is that of the optional adverts, on iPhone, iPad and Android, by Google — and only when you choose to watch one.</strong> Your game is a file, it lives on your device; when you leave the game, a copy goes to <strong>your</strong> iCloud or Google account, so that you can find it on another device — never to a server of ours.</p>
-<p>The only server of ours is the online Colosseum's (see below): it receives nothing until you have entered it, and never your game. The app contains no analytics and no behaviour-measuring tool meant for us. In <strong>the browser</strong>, it contains no advertising.</p>
+<p><strong>Legion of Paradise sends its publisher only anonymous game statistics, which you can refuse (the days you play, the end of the guide, the first purchase, with no account or identity), and what the online Colosseum needs, only if you choose to enter it: an identifier drawn at random, a legion name drawn by lot (or your Game Center nickname), your team, your rating, your battles, your Siege assaults, the angel you lend as a reinforcement, your friends, your guild and your messages in its chat. The only other data collected is that of the optional adverts, on iPhone, iPad and Android, by Google — and only when you choose to watch one.</strong> Your game is a file, it lives on your device; when you leave the game, a copy goes to <strong>your</strong> iCloud or Google account, so that you can find it on another device — never to a server of ours.</p>
+<p>The only server of ours is the online game's (see below): it never receives your game; it receives the anonymous statistics, unless you refuse them, and nothing from the Colosseum until you have entered it. The app contains no measurement or analytics tool supplied by a third party. In <strong>the browser</strong>, it contains no advertising.</p>
 <h2>What the app stores, and where</h2>
 <table><thead><tr><th>What</th><th>Where it is written</th><th>Who can read it</th></tr></thead><tbody>
 <tr><td>Your progress: legion, buildings, gold, quests, settings</td><td>A file on your device (<code>sauvegarde.json</code>); browser local storage for the web version</td><td>You alone</td></tr>
@@ -125,6 +125,7 @@
 <tr><td>A randomly drawn game identifier</td><td>The same file</td><td>You alone</td></tr>
 <tr><td>Your language and volume settings</td><td>The same file</td><td>You alone</td></tr>
 <tr><td>Your online Colosseum account: an identifier and a secret drawn at random</td><td>The same file, and the Colosseum server (see below)</td><td>You, and the publisher for the server</td></tr>
+<tr><td>The anonymous statistics: an identifier drawn at random, the install date, the events not yet sent</td><td>The same file, and our server (see below)</td><td>You, and the publisher for the server</td></tr>
 </tbody></table>
 <p><strong>The game identifier does not identify a person or a device.</strong> It is a number drawn at random the first time you save online, and its only job is to notice that a second device has written since your last exchange, so the app can ask you which of the two games to keep instead of silently overwriting one. It is derived from no hardware, advertising or account identifier. Erasing the game erases it.</p>
 <h2>What leaves the device</h2>
@@ -137,6 +138,12 @@
 </ul>
 <p>What leaves is the content described in the table above, and nothing else: a saved game. No name, no address, no contacts, no location.</p>
 <p>To remove a stored game, use the Google Play Games or iCloud settings on your device; they hold it, and they alone can erase it.</p>
+<h3>Anonymous statistics</h3>
+<p>To know whether players stay and where the game loses them, the app sends our server a few <strong>anonymous events</strong>: your first entry into the game, each day you open it (once a day), the end of the first-steps guide and your first purchase. Each one carries the number of days since you installed the game and the date of that installation, with the platform (iPhone and iPad, or Android), the game version and its language. Offline, they wait in your game and leave later.</p>
+<p><strong>What links them</strong>: an identifier drawn at random by the app, which is neither your Colosseum account, nor an advertising identifier, nor your device's, and says nothing about you. Nothing else: no name, no contacts, no location, no device model, no IP address in our tables. We read these statistics only pooled, in groups of players who installed the game the same week ("how many come back the next day?"), and cannot pick out yours.</p>
+<p><strong>Where and for how long</strong>: on the same server as the online Colosseum (Supabase, Ireland, see below), for <strong>13 months</strong>, after which the database erases them by itself.</p>
+<p><strong>Why</strong>: to improve the game, on the basis of its publisher's legitimate interest in knowing whether players enjoy it. None of it is sold or shared, and none of it is used for advertising.</p>
+<p><strong>Refusing them</strong>: ⚙ Settings → About → "Anonymous statistics". Once they are turned off, nothing more leaves, and whatever was waiting in your game is erased.</p>
 <h3>The online Colosseum</h3>
 <p>At the Colosseum, your Legion fights other players' legions. <strong>Nothing is sent until you have entered it</strong>: on your first visit, the Colosseum window says what is kept and offers "Enter the online Colosseum" or "Train offline"; training sends nothing. Once you have entered, the game sends your team on each visit to the Colosseum and with each Siege assault, and once a day at launch, so that it can defend your place; once a day, too, it asks what the Siege owes you. If you lend an angel as a reinforcement, the game sends it too, once a day at launch, so that your friends can call it; and when you call a reinforcement, it tells the server which one. At each launch, it also asks for your friends list (and their guilds), the gifts your friends have sent you and the guild invitations they have sent you; when you invite a friend into your guild, or answer an invitation, the game tells the server. If you belong to a guild, at each launch and when you open its window, it also sends what your hunting brings it (a number of points) and asks for your guild's state. When you write in your guild's chat, each message goes to the server, and the game re-reads your guild's messages every few seconds while you look at them, and now and then otherwise.</p>
 <p><strong>What our server keeps</strong>:</p>
@@ -184,7 +191,7 @@
 <p>At any time, from Virgil's window, <strong>"My privacy choices (Google)"</strong>, where the law of your country requires it, reopens Google's window. And asking for no favour means sending no advert request.</p>
 <p>If you bought the Monthly Blessing, Virgil grants his favours <strong>without an advert</strong>: no request is sent to Google for them.</p>
 <h2>Children</h2>
-<p>The app is not specifically directed at children and asks them for no information. Data is collected by Google, for Virgil's optional adverts on iPhone, iPad and Android, and only when one chooses to watch one; and by us, for the online Colosseum, only if one enters it (see above: no name, no contacts). It also contains <strong>in-app purchases</strong>: the Google Play and App Store parental controls can restrict both.</p>
+<p>The app is not specifically directed at children and asks them for no information. Data is collected by Google, for Virgil's optional adverts on iPhone, iPad and Android, and only when one chooses to watch one; and by us, for the online Colosseum, only if one enters it (see above: no name, no contacts), and for the anonymous statistics, which can be refused in "About". It also contains <strong>in-app purchases</strong>: the Google Play and App Store parental controls can restrict both.</p>
 <p>A <strong>guild chat</strong> is open only to its members: it is filtered (insults, hate, sexual content, threats, links, phone numbers), every message or guild name can be reported with a long press and is read by the game's publisher, and a player can block another.</p>
 <h2>Your rights</h2>
 <p>The European General Data Protection Regulation (GDPR) gives you rights of access, rectification, erasure, restriction, objection and portability over your personal data.</p>
@@ -193,13 +200,16 @@
 <li><strong>Your online Colosseum account</strong>: to get a copy of it or have it erased, with your team, your battles, your Siege assaults, your reinforcements, your friends, your guild and your messages, write to us at <strong>legionduparadis@gmail.com</strong> giving your legion name (it is shown at the top of the Colosseum). It also erases itself after 12 months without a battle.</li>
 </ul>
 <ul>
+<li><strong>Anonymous statistics</strong>: they are linked to no one, and we cannot pick out yours to give them to you or erase them; to stop any more being sent, refuse them in ⚙ Settings → About. Those already sent erase themselves after 13 months.</li>
+</ul>
+<ul>
 <li><strong>Erase the local game</strong>: uninstall the app, or ⚙ Settings → "Start over".</li>
 <li><strong>Erase the online game</strong>: through the Google Play Games settings ("Delete game data") or iCloud settings on your device.</li>
 <li><strong>Advertising data</strong>: change your choices in Google's window (see "Changing your choices"); exercise your rights with Google, at <a href="https://myaccount.google.com">myaccount.google.com</a>.</li>
 </ul>
 <p>You may nevertheless write to us at any time at <strong>legionduparadis@gmail.com</strong>; we answer within 5 working days. If you are in the European Union you also have the right to lodge a complaint with your national data protection authority.</p>
 <h2>Security and retention</h2>
-<p>Our only database is the online Colosseum's. It is not open to the public: only the Colosseum function reads and writes it, and each account's secret is kept there only as a hash. A battle, a week of the Siege, a reinforcement's help, a gift, a friendly challenge, a friend request or a request to join a guild, or a member's Siege damage for their guild is kept for 90 days, as is a report, a chat message or a guild invitation for 7 days, an inactive account for 12 months (see "The online Colosseum"). Advertising data is retained by Google under its own policy. The local game lives as long as the app is installed; the online game lives as long as your Google or Apple account keeps it.</p>
+<p>Our only database is the online game's (the Colosseum and the anonymous statistics, kept for 13 months). It is not open to the public: only the Colosseum function reads and writes it, and each account's secret is kept there only as a hash. A battle, a week of the Siege, a reinforcement's help, a gift, a friendly challenge, a friend request or a request to join a guild, or a member's Siege damage for their guild is kept for 90 days, as is a report, a chat message or a guild invitation for 7 days, an inactive account for 12 months (see "The online Colosseum"). Advertising data is retained by Google under its own policy. The local game lives as long as the app is installed; the online game lives as long as your Google or Apple account keeps it.</p>
 <h2>Changes</h2>
 <p>Any change to this policy will be published on this page, with its date. A change affecting what the app transmits — a new ad network, or adverts on another platform, for instance — would be announced inside the app before taking effect.</p>
 <h2>Contact</h2>
