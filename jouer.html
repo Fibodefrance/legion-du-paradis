@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La Légion du Paradis</title>
+<meta name="description" content="Un jeu de gestion et de progression, dans un Paradis de marbre blanc et d&#x27;or.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://fibodefrance.github.io/legion-du-paradis/jouer.html">
+<meta property="og:title" content="La Légion du Paradis">
+<meta property="og:description" content="Un jeu de gestion et de progression, dans un Paradis de marbre blanc et d&#x27;or.">
+<meta property="og:url" content="https://fibodefrance.github.io/legion-du-paradis/jouer.html">
+<style>
+  /* LA PAGE « JOUER » — le lien de la bio TikTok. La même DA que
+     `modele.html` (marbre blanc, filet d'or) : c'est le même site. Elle ne
+     se lit vraiment que sur un ordinateur, ou sur un Android tant que le
+     jeu n'est pas sur Google Play ; un iPhone repart aussitôt. */
+  :root {
+    --marbre:      #f7f4ee;
+    --marbre-ombre:#ebe5d9;
+    --encre:       #2b2722;
+    --encre-pale:  #6b6355;
+    --or:          #b8912f;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    padding: 0 16px 3rem;
+    background: var(--marbre);
+    background-image:
+      radial-gradient(ellipse at 20% -10%, #ffffff 0%, transparent 55%),
+      radial-gradient(ellipse at 90% 10%, #fffdf6 0%, transparent 45%);
+    color: var(--encre);
+    font: 400 17px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif;
+  }
+  .page { max-width: 26rem; margin: 0 auto; text-align: center; }
+
+  header { border-bottom: 2px solid var(--or); padding: 3rem 0 1.4rem; margin-bottom: 1.6rem; }
+  .studio {
+    font: 600 0.78rem/1 system-ui, sans-serif; letter-spacing: 0.18em;
+    text-transform: uppercase; color: var(--or);
+  }
+  h1 { font-size: 2rem; line-height: 1.2; margin: 0.7rem 0 0.8rem; font-weight: 400; }
+  .accroche { margin: 0; color: var(--encre-pale); font-style: italic; }
+
+  .etat { min-height: 1.6em; margin: 0 0 1.2rem; font: 0.95rem/1.6 system-ui, sans-serif; }
+  .etat a { color: #8a6a12; }
+
+  .boutons { display: flex; flex-direction: column; gap: 0.9rem; }
+  .bouton {
+    display: block; padding: 0.9rem 1rem; border-radius: 12px;
+    border: 2px solid var(--or); background: #fffdf8; color: var(--encre);
+    text-decoration: none; font: 700 1.15rem/1.2 system-ui, sans-serif;
+  }
+  .bouton small {
+    display: block; margin-top: 0.3rem;
+    font-weight: 400; font-size: 0.85rem; color: var(--encre-pale);
+  }
+  a.bouton:hover, a.bouton:focus-visible, .bouton.vise { background: var(--or); color: #fff; }
+  a.bouton:hover small, a.bouton:focus-visible small, .bouton.vise small { color: #fff; }
+  .bouton.eteint { border-style: dashed; border-color: var(--marbre-ombre); color: var(--encre-pale); background: transparent; }
+
+  footer {
+    margin-top: 3rem; padding-top: 1rem; border-top: 2px solid var(--or);
+    font: 0.82rem/1.6 system-ui, sans-serif; color: var(--encre-pale);
+  }
+  footer a { color: var(--encre-pale); }
+</style>
+</head>
+<body>
+<div class="page">
+<header>
+  <div class="studio">Chouette Games</div>
+  <h1 id="jeu">La Légion du Paradis</h1>
+  <p class="accroche" id="accroche">Un jeu de gestion et de progression, dans un Paradis de marbre blanc et d&#x27;or.</p>
+</header>
+<main>
+  <p class="etat" id="etat"></p>
+  <div class="boutons">
+    <a class="bouton" id="ios" href="https://apps.apple.com/app/id6815461133">App Store<small>iPhone · iPad</small></a>
+    <span class="bouton eteint" id="android">Google Play<small id="bientot">Bientôt sur Android</small></span>
+  </div>
+</main>
+<footer>
+© 2026 Chouette Games (David Scalisi) · <a id="site" href="index.html">Le site du jeu</a> · <a id="mentions" href="mentions-legales.html">Mentions légales</a>
+</footer>
+</div>
+<script>
+// L'aiguillage : chaque téléphone vers son store, dans la langue de son
+// navigateur. Un ordinateur voit les deux boutons et n'est envoyé nulle part.
+// Les textes et les adresses viennent de batir_site.py (JOUER) et de
+// site/identite.json (« jouer »).
+(function () {
+  var TEXTES = {"fr": {"lang": "fr", "jeu": "La Légion du Paradis", "accroche": "Un jeu de gestion et de progression, dans un Paradis de marbre blanc et d'or.", "site": "Le site du jeu", "accueil": "index.html", "mentions_libelle": "Mentions légales", "mentions": "mentions-legales.html", "bientot": "Bientôt sur Android", "ouvre_ios": "Ouverture de l'App Store…", "ouvre_android": "Ouverture de Google Play…", "note": "Le jeu arrive bientôt sur Android. Suivez <a href=\"https://www.tiktok.com/@chouette.games\">@chouette.games<\/a> sur TikTok pour savoir quand il sort."}, "en": {"lang": "en", "jeu": "Legion of Paradise", "accroche": "A management and progression game, in a Paradise of white marble and gold.", "site": "Game website", "accueil": "index-en.html", "mentions_libelle": "Legal", "mentions": "legal.html", "bientot": "Coming soon to Android", "ouvre_ios": "Opening the App Store…", "ouvre_android": "Opening Google Play…", "note": "The game is coming to Android soon. Follow <a href=\"https://www.tiktok.com/@chouette.games\">@chouette.games<\/a> on TikTok to find out when it's out."}, "de": {"lang": "de", "jeu": "Legion des Himmels", "accroche": "Ein Aufbau- und Fortschrittsspiel in einem Paradies aus weißem Marmor und Gold.", "site": "Website zum Spiel", "accueil": "index-de.html", "mentions_libelle": "Impressum", "mentions": "legal-de.html", "bientot": "Bald für Android", "ouvre_ios": "Der App Store wird geöffnet …", "ouvre_android": "Google Play wird geöffnet …", "note": "Das Spiel erscheint bald für Android. Folge <a href=\"https://www.tiktok.com/@chouette.games\">@chouette.games<\/a> auf TikTok, um zu erfahren, wann es so weit ist."}, "es": {"lang": "es", "jeu": "Legión del Paraíso", "accroche": "Un juego de gestión y progresión, en un Paraíso de mármol blanco y oro.", "site": "Web del juego", "accueil": "index-es.html", "mentions_libelle": "Aviso legal", "mentions": "legal-es.html", "bientot": "Pronto en Android", "ouvre_ios": "Abriendo la App Store…", "ouvre_android": "Abriendo Google Play…", "note": "El juego llegará pronto a Android. Sigue a <a href=\"https://www.tiktok.com/@chouette.games\">@chouette.games<\/a> en TikTok para saber cuándo sale."}, "pt_BR": {"lang": "pt-BR", "jeu": "Legião do Paraíso", "accroche": "Um jogo de gestão e progressão, num Paraíso de mármore branco e ouro.", "site": "Site do jogo", "accueil": "index-pt-br.html", "mentions_libelle": "Aviso legal", "mentions": "legal-pt-br.html", "bientot": "Em breve no Android", "ouvre_ios": "Abrindo a App Store…", "ouvre_android": "Abrindo o Google Play…", "note": "O jogo chega em breve ao Android. Siga <a href=\"https://www.tiktok.com/@chouette.games\">@chouette.games<\/a> no TikTok para saber quando ele for lançado."}, "ja": {"lang": "ja", "jeu": "天国のレギオン", "accroche": "白い大理石と黄金の天国を舞台にした、経営・育成ゲームです。", "site": "公式サイト", "accueil": "index-ja.html", "mentions_libelle": "法的情報", "mentions": "legal-ja.html", "bientot": "Android版は近日公開", "ouvre_ios": "App Store を開いています…", "ouvre_android": "Google Play を開いています…", "note": "Android版は近日公開予定です。配信開始は TikTok の <a href=\"https://www.tiktok.com/@chouette.games\">@chouette.games<\/a> でお知らせします。"}, "zh_TW": {"lang": "zh-Hant-TW", "jeu": "天堂軍團", "accroche": "一款經營與養成遊戲，舞台是白色大理石與黃金打造的天堂。", "site": "遊戲官網", "accueil": "index-zh-tw.html", "mentions_libelle": "法律聲明", "mentions": "legal-zh-tw.html", "bientot": "Android 版即將推出", "ouvre_ios": "正在開啟 App Store…", "ouvre_android": "正在開啟 Google Play…", "note": "Android 版即將推出。追蹤 TikTok 上的 <a href=\"https://www.tiktok.com/@chouette.games\">@chouette.games<\/a>，即可得知上架時間。"}, "ko": {"lang": "ko", "jeu": "천국의 군단", "accroche": "하얀 대리석과 황금으로 빛나는 천국에서 펼쳐지는 경영·성장 게임.", "site": "게임 웹사이트", "accueil": "index-ko.html", "mentions_libelle": "법적 고지", "mentions": "legal-ko.html", "bientot": "Android 버전 출시 예정", "ouvre_ios": "App Store를 여는 중…", "ouvre_android": "Google Play를 여는 중…", "note": "Android 버전이 곧 출시됩니다. 출시 소식은 TikTok <a href=\"https://www.tiktok.com/@chouette.games\">@chouette.games<\/a>에서 알려 드립니다."}};
+  var STORES = {ios: "https://apps.apple.com/app/id6815461133", android: null};
+
+  function langue(prefs) {
+    var codes = {fr: "fr", en: "en", de: "de", es: "es", pt: "pt_BR", ja: "ja", zh: "zh_TW", ko: "ko"};
+    for (var i = 0; i < prefs.length; i++) {
+      var code = codes[String(prefs[i] || "").slice(0, 2).toLowerCase()];
+      if (code) return code;
+    }
+    return "en";
+  }
+
+  function plateforme(ua, touches) {
+    if (/android/i.test(ua)) return "android";
+    if (/iphone|ipad|ipod/i.test(ua)) return "ios";
+    // Depuis iPadOS 13, Safari se présente en Mac : seul l'écran tactile
+    // trahit l'iPad.
+    if (/macintosh/i.test(ua) && touches > 1) return "ios";
+    return "autre";
+  }
+
+  var nav = window.navigator;
+  var t = TEXTES[langue(nav.languages && nav.languages.length ? nav.languages : [nav.language])];
+  document.documentElement.lang = t.lang;
+  document.title = t.jeu;
+  document.getElementById("jeu").textContent = t.jeu;
+  document.getElementById("accroche").textContent = t.accroche;
+  var site = document.getElementById("site");
+  site.textContent = t.site;
+  site.href = t.accueil;
+  var mentions = document.getElementById("mentions");
+  mentions.textContent = t.mentions_libelle;
+  mentions.href = t.mentions;
+  var bientot = document.getElementById("bientot");
+  if (bientot) bientot.textContent = t.bientot;
+
+  var p = plateforme(nav.userAgent || "", nav.maxTouchPoints || 0);
+  var etat = document.getElementById("etat");
+  if (STORES[p]) {
+    document.getElementById(p).className += " vise";
+    etat.textContent = t["ouvre_" + p];
+    window.location.replace(STORES[p]);
+  } else if (p === "android") {
+    // Le jeu n'est pas encore sur Google Play : la fiche répondrait
+    // « Élément introuvable ». On le dit, et on dit où guetter la sortie.
+    etat.innerHTML = t.note;
+  }
+})();
+</script>
+</body>
+</html>
