@@ -73,6 +73,20 @@
   th, td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--marbre-ombre); vertical-align: top; }
   th { background: var(--marbre-ombre); font-weight: 600; }
 
+  /* Le bouton App Store de l'accueil : le même que la page « jouer ». */
+  .boutons { display: flex; flex-direction: column; gap: 0.9rem; margin: 1.8rem 0 0.5rem; max-width: 22rem; }
+  .bouton {
+    display: block; padding: 0.9rem 1rem; border-radius: 12px;
+    border: 2px solid var(--or); background: #fffdf8; color: var(--encre);
+    text-decoration: none; font: 700 1.15rem/1.2 system-ui, sans-serif;
+  }
+  .bouton small {
+    display: block; margin-top: 0.3rem;
+    font-weight: 400; font-size: 0.85rem; color: var(--encre-pale);
+  }
+  a.bouton:hover, a.bouton:focus-visible { background: var(--or); color: #fff; }
+  a.bouton:hover small, a.bouton:focus-visible small { color: #fff; }
+
   .brouillon {
     background: #7a1f1f; color: #fff; font-family: system-ui, sans-serif;
     font-weight: 700; text-align: center; padding: 0.8rem 1rem;
@@ -117,6 +131,7 @@
 <main>
 <p><em>하얀 대리석과 황금으로 빛나는 천국에서 펼쳐지는 경영·성장 게임.</em></p>
 <p>천사 군단을 지휘하세요. 천사들은 지옥의 아홉 원을 내려가 천상의 도시를 세울 재료를 가지고 돌아오고, 도시는 그 대가로 더 강해진 군단을 돌려줍니다. 전투는 천사들이 스스로 합니다. 결정은 당신이 내립니다.</p>
+<div class="boutons"><a class="bouton" href="https://apps.apple.com/app/id6815461133">App Store에서 다운로드<small>iPhone · iPad — 무료</small></a></div>
 <ul>
 <li>세 계급, 네 클래스: 전사, 성기사, 궁수, 마법사.</li>
 <li>아홉 개의 원과 그 수문장들, 그리고 매일 다시 내려가는 우물.</li>

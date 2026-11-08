@@ -73,6 +73,20 @@
   th, td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--marbre-ombre); vertical-align: top; }
   th { background: var(--marbre-ombre); font-weight: 600; }
 
+  /* Le bouton App Store de l'accueil : le même que la page « jouer ». */
+  .boutons { display: flex; flex-direction: column; gap: 0.9rem; margin: 1.8rem 0 0.5rem; max-width: 22rem; }
+  .bouton {
+    display: block; padding: 0.9rem 1rem; border-radius: 12px;
+    border: 2px solid var(--or); background: #fffdf8; color: var(--encre);
+    text-decoration: none; font: 700 1.15rem/1.2 system-ui, sans-serif;
+  }
+  .bouton small {
+    display: block; margin-top: 0.3rem;
+    font-weight: 400; font-size: 0.85rem; color: var(--encre-pale);
+  }
+  a.bouton:hover, a.bouton:focus-visible { background: var(--or); color: #fff; }
+  a.bouton:hover small, a.bouton:focus-visible small { color: #fff; }
+
   .brouillon {
     background: #7a1f1f; color: #fff; font-family: system-ui, sans-serif;
     font-weight: 700; text-align: center; padding: 0.8rem 1rem;
@@ -117,6 +131,7 @@
 <main>
 <p><em>Ein Aufbau- und Fortschrittsspiel in einem Paradies aus weißem Marmor und Gold.</em></p>
 <p>Du befehligst eine Legion von Engeln. Sie steigen hinab in die neun Kreise der Hölle, bringen mit, was es zum Bau der Himmelsstadt braucht, und die Stadt macht die Legion stärker. Sie kämpfen von selbst: Du entscheidest.</p>
+<div class="boutons"><a class="bouton" href="https://apps.apple.com/app/id6815461133">Im App Store laden<small>iPhone · iPad — kostenlos</small></a></div>
 <ul>
 <li>Drei Chöre, vier Klassen: Krieger, Paladin, Bogenschütze, Zauberer.</li>
 <li>Neun Kreise, ihre Wächter und ein Brunnen, in den man jeden Tag aufs Neue hinabsteigt.</li>

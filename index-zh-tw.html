@@ -73,6 +73,20 @@
   th, td { text-align: left; padding: 0.55rem 0.7rem; border-bottom: 1px solid var(--marbre-ombre); vertical-align: top; }
   th { background: var(--marbre-ombre); font-weight: 600; }
 
+  /* Le bouton App Store de l'accueil : le même que la page « jouer ». */
+  .boutons { display: flex; flex-direction: column; gap: 0.9rem; margin: 1.8rem 0 0.5rem; max-width: 22rem; }
+  .bouton {
+    display: block; padding: 0.9rem 1rem; border-radius: 12px;
+    border: 2px solid var(--or); background: #fffdf8; color: var(--encre);
+    text-decoration: none; font: 700 1.15rem/1.2 system-ui, sans-serif;
+  }
+  .bouton small {
+    display: block; margin-top: 0.3rem;
+    font-weight: 400; font-size: 0.85rem; color: var(--encre-pale);
+  }
+  a.bouton:hover, a.bouton:focus-visible { background: var(--or); color: #fff; }
+  a.bouton:hover small, a.bouton:focus-visible small { color: #fff; }
+
   .brouillon {
     background: #7a1f1f; color: #fff; font-family: system-ui, sans-serif;
     font-weight: 700; text-align: center; padding: 0.8rem 1rem;
@@ -117,6 +131,7 @@
 <main>
 <p><em>一款經營與養成遊戲，舞台是白色大理石與黃金打造的天堂。</em></p>
 <p>你指揮一支天使軍團。他們深入地獄九圈，帶回建造天界之城所需的一切，而這座城會還你一支更強的軍團。他們會自行戰鬥：由你來做決定。</p>
+<div class="boutons"><a class="bouton" href="https://apps.apple.com/app/id6815461133">在 App Store 下載<small>iPhone · iPad — 免費</small></a></div>
 <ul>
 <li>三種階級、四種職業：戰士、聖騎士、弓箭手、法師。</li>
 <li>九圈、各圈的守衛，以及每天都能再次深入的巨人之井。</li>
